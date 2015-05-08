@@ -26,3 +26,10 @@ function my_facebook_tags() {
 	<?php
 	}
 } 
+add_action( 'publish_post', 'post_published_notification', 10, 2 );
+function post_published_notification( $ID, $post ) {
+	$email = get_the_author_meta( 'user_email', $post->post_author );
+	$subject = 'Nuevo post: ' . $post->post_title;
+	$message = 'Acabamos de crear un nuevo post: ' . $post->post_title . ' miralo aquí: ' . get_permalink( $ID );
+	wp_mail( $email, $subject, $message );
+} 
