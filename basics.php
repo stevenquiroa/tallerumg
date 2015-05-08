@@ -33,3 +33,8 @@ function post_published_notification( $ID, $post ) {
 	$message = 'Acabamos de crear un nuevo post: ' . $post->post_title . ' miralo aquí: ' . get_permalink( $ID );
 	wp_mail( $email, $subject, $message );
 } 
+add_filter('login_errors','login_error_message');
+	function login_error_message( $error ){
+	$error = "Pasword incorrecto, FUERA DE AQUÍ";
+	return $error;
+} 
