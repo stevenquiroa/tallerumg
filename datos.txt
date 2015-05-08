@@ -1,0 +1,5 @@
+Documentación: https://codex.wordpress.org/Writing_a_Plugin
+Nombre Base de Datos: taller_umg
+WP HEAD: https://codex.wordpress.org/Function_Reference/wp_head
+Blog: http://quiroa.me
+Repositorio: https://github.com/stevenquiroa/tallerumg/tree/00
