@@ -8,3 +8,7 @@
 * Author URI: http://quiroa.me
 * License: GPL2
 */ 
+add_action( 'wp_head', 'my_facebook_tags' );
+function my_facebook_tags() {
+	echo 'Estoy en la seccion';
+} 
